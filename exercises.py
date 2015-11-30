@@ -170,8 +170,11 @@ def base_pair(c):
     of the base pair. If the base is not recognized,
     return 'unknown'.
     """
-    return None
-
+    basepair={'a':'t','A':'t','c':'g','C':'g','g':'c','G':'c','t':'a','T':'a'}
+    if c in 'actgACTG':
+        return(basepair[c])
+    else:
+        return('unknown')
 
 def test_base_pair():
     assert base_pair('a') == 't'
