@@ -87,7 +87,11 @@ def histogram(l):
     """
     Converts a list of integers into a simple string histogram.
     """
-    return None
+    list=[0]*(len(l)*2-1)
+    for i in range(0,len(l)):
+        list[(i*2):((i*2)+2)]=['#'*l[i],'\n']
+    hist=''.join(list[0:(len(l)*2-1)])    
+    return(hist)
 
 
 def test_histogram():
@@ -101,6 +105,7 @@ def get_word_lengths(s):
     Returns a list of integers representing
     the word lengths in string s.
     """
+    
     return None
 
 
