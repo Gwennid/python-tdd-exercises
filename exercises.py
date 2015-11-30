@@ -303,7 +303,17 @@ def get_3mer_usage_chart(s):
     The list is alphabetically sorted by the name
     of the 3-mer.
     """
-    return None
+    triplets={}
+    for i in range(0,len(s)-2):
+        if s[i:i+3] in triplets:
+            triplets[s[i:i+3]]+=1
+        else:
+            triplets[s[i:i+3]]=1
+    sort_triplets=sorted(triplets)
+    L=[]
+    for j in sort_triplets:
+        L+=[(j,triplets[j])]
+    return(L)
 
 
 def test_get_3mer_usage_chart():
