@@ -237,7 +237,12 @@ def get_reverse_complement(s):
     Return the reverse complement of string s
     (complement reversed in order).
     """
-    return None
+    complement={'a':'T','A':'T','c':'G','C':'G','g':'C','G':'C','t':'A','T':'A'}
+    max=len(s)    
+    rev=[0]*max
+    for i in range(1,(max+1)):
+        rev[i-1]=complement[s[max-i]]
+    return(''.join(rev))
 
 
 def test_get_reverse_complement():
