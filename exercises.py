@@ -256,7 +256,12 @@ def remove_substring(substring, string):
     """
     Returns string with all occurrences of substring removed.
     """
-    return None
+    L=[]
+    ite=int(len(string)/len(substring))
+    for i in range(0,ite):
+        if string[(i*3):(i*3+3)]!=substring:
+            L+=string[(i*3):(i*3+3)]
+    return(''.join(L))
 
 
 def test_remove_substring():
