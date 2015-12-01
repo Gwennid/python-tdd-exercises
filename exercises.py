@@ -470,7 +470,7 @@ Be all my sins remember'd."""
 
 def pythagorean_triples(n):
     """
-    Returns list of all unique pythagorean triples
+    Returns list of all unique pythagorean triples (a^2 + b^2 = c^2)
     (a, b, c) where a < b < c <= n.
     """
     l = []
@@ -486,4 +486,5 @@ def pythagorean_triples(n):
 # ------------------------------------------------------------------------------
 
 def test_pythagorean_triples():
+    assert pythagorean_triples(6) == [(3,4,5)] 
     pass  # so far we do not test anything, check also test coverage
