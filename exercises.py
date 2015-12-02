@@ -345,13 +345,9 @@ def read_column(file_name, column_number):
     and returns the values as floats in a list.
     """
     L=[]
-    per_row=[]
     for line in open(file_name):
-        per_row.append(line.split())
-    for i in range(0,len(per_row)):
-        L+=per_row[i][column_number]
-    for i in range(0,len(L)):
-        L[i]=float(L[i])
+        column = line.split()
+        L.append(float(column[column_number - 1]))
     return(L)
 
 
